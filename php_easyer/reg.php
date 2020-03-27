@@ -55,10 +55,11 @@ if (count($_POST) > 0) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="css/main.css" rel="stylesheet" type="text/css" title="alap">
     <title>Register</title>
 </head>
-<body>
-    <h1>Register</h1>
+<body class="loginpage">
+    <h2 class="h2">REGISTER PAGE</h2>
 
 	<ul>
     <?php 
@@ -69,26 +70,29 @@ if (count($_POST) > 0) {
 
 	?>
 	</ul>
-	
-	<br>
-    <form action="" method="post">
-        <label>
-            Email cím
-            <input type="email" name="email">
-        </label>
-        <br />
-        <label>
-            Felhasználónév
-            <input type="text" name="username">
-        </label>
-        <br />
-        <label>
-            Jelszó
-            <input type="password" name="password" required> <br>
-        </label>
+<div class="loginwindow">
+  <form action="" method="post">
+    <div class="imgcontainer">
+      <img src="media/logo4.png" alt="Avatar" class="avatar">
+    </div>
 
-        <button type="submit">Regisztrál</button>
-    </form>
+    <div class="container">
+      
+        <div><label for="email"><b>E-mail cím</b></label></div>
+            <input type="text" placeholder="Enter E-mail" name="email" required>
+        
+        <div><label for="name"><b>Felhasználónév</b></label></div>
+            <input type="text" placeholder="Enter Name" name="username" required>
+        
+        <div><label for="password"><b>Jelszó</b></label></div>
+            <input type="password" placeholder="Enter Password" name="password" required>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+        <button class="cancelbtn" type="submit">Regisztrál</button>
+    </div>
+  </form>
+</div>
 
     <!-- <script src="ajax.js"></script> -->
     <script src="reg.js"></script>

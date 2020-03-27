@@ -44,11 +44,12 @@ if (count($_POST) > 0) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="css/main.css" rel="stylesheet" type="text/css" title="alap">
   <title>Login</title>
 </head>
-<body>
+<body class="loginpage">
   
-<h2>LOGIN PAGE</h2>
+<h2 class="h2">LOGIN PAGE</h2>
 	
   <ul>
     <?php 
@@ -59,34 +60,35 @@ if (count($_POST) > 0) {
 
 	?>
 	</ul>
-
+<div class="loginwindow">
   <form action="" method="post">
       <div class="imgcontainer">
-        <span onclick="document.getElementById('page').style.display='none'" class="close"
-          title="Close Modal">&times;</span>
         <img src="media/logo4.png" alt="Avatar" class="avatar">
       </div>
 
       <div class="container">
-        <div><label for="uname"><b>E-mail</b></label></div>
+        <div><label for="email"><b>E-mail</b></label></div>
         <input type="text" placeholder="Enter E-mail" value="<?php echo isset($_POST["email"]) ? $_POST["email"] : '' ?>" name="email" required>
 
-        <div><label for="psw"><b>Password</b></label></div>
+        <div><label for="password"><b>Password</b></label></div>
         <input type="password" placeholder="Enter Password" name="password" required>
 
       </div>
 
       <div class="container" style="background-color:#f1f1f1">
-        <button type="button" onclick="document.getElementById('page').style.display='none'"
-          class="cancelbtn">Cancel</button>
-          <button type="submit" class="submitbtn">Login</button>
-        <span class="psw"> </span>
+
+          <!-- <form method="get" action="./index.php">
+              <button type="button" class="cancelbtn">Cancel</button>
+          </form> -->
+
+        <button type="submit" class="cancelbtn">Login</button>
+          <span class="psw"> </span>
       </div>
     </form>
     <form method="get" action="./reg.php">
             <button class="loginbtn" type="submit">Register</button>
     </form>
-  </div>
+</div>
 
 
 
