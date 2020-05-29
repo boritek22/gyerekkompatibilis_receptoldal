@@ -105,18 +105,17 @@ if (azonositott_e()) {
               <select name="category" id="categoryID">
                 <option value="reggeli">reggeli</option>
                 <option value="ebed">ebéd</option>
-                <option value="leves">leves</option>
-                <option value="eloetel">előétel</option>
-                <option value="foetel">főétel</option>
+                <!-- <option value="leves">leves</option> -->
+                <!-- <option value="eloetel">előétel</option> -->
+                <!-- <option value="foetel">főétel</option> -->
                 <option value="edesseg">édesség</option>
-                <option value="sossag">sósság</option>
+                <option value="sossag">sós finomság</option>
                 <option value="karacsonyi">karácsonyi</option>
                 <option value="szulinapi">szülinapi</option>
                 <option value="husveti">húsvéti</option>
                 <option value="halloweeni">halloweeni</option>
                 <option value="szilveszteri">szilveszteri</option>
                 <option value="ital">ital</option>
-                <option value="kreativ">kreatív</option>
               </select>
             </div>
             <br>
@@ -129,7 +128,7 @@ if (azonositott_e()) {
             <div id="hozzavalos">
               <label for="fname">Hozzávalók <sup style="color: red">*</sup></label><br>
 
-              <input list="amounts" name="amounts[~]" placeholder="mennyiségek" type="number" min="1" required>
+              <input list="amounts" name="amounts[0]" placeholder="mennyiségek" type="number" min="1" required>
               <datalist>
                 <?php
                 foreach ($mennyisegek as $mennyiseg) {
@@ -138,7 +137,7 @@ if (azonositott_e()) {
                 ?>
               </datalist>
 
-              <input list="mertekek" name="mertekek[~]" placeholder="mértékegységek" required>
+              <input list="mertekek" name="mertekek[0]" placeholder="mértékegységek" required>
               <datalist id="mertekek">
                 <?php
                 foreach ($mertekegysegek as $mertekegyseg) {
@@ -147,7 +146,7 @@ if (azonositott_e()) {
                 ?>
               </datalist>
 
-              <input list="ingredients" name="ingredients[~]" placeholder="hozzávalók" required>
+              <input list="ingredients" name="ingredients[0]" placeholder="hozzávalók" required>
               <datalist id="ingredients">
                 <?php
                 foreach ($hozzavalok as $hozzavalo) {
@@ -193,8 +192,8 @@ if (azonositott_e()) {
 
                 <div>
                   <!-- csak szám lehet -->
-                  <label for="fname">Elkészítési idő <sup style="color: red">*</sup></label><br>
-                  <input type="number" name="time" min="1" max="1439" required>
+                  <label for="fname">Elkészítési idő, percben megadva<sup style="color: red">*</sup></label><br>
+                  <input type="number" name="time" min="1" max="1439" required> perc
                 </div>
                 <br>
                 <div class="form-group">
@@ -260,9 +259,9 @@ if (azonositott_e()) {
                   <br>
                   
                   <!-- image, video, entertainment, slidepic, userId -->
-                  <input type="submit" value="Recept hozzaadasa" name="submit">
+                  <input type="submit" value="Recept hozzáadása" name="submit">
           </form>
-        <?php } else { ?> <div> <?php echo "Receptet csak bejelentkezett felhasználók tölthetnek fel."; ?> </div>
+        <?php } else { ?> <div style="margin-left: 4%"> <?php echo "Receptet csak bejelentkezett felhasználók tölthetnek fel."; ?> </div>
         <?php } ?>
 
         </div>
@@ -372,32 +371,15 @@ if (azonositott_e()) {
           type: "POST",
           url: "hozzaad.php",
           success: function(data) {
-            var formatted = data.split("~").join(`${counter}`);
+            var formatted =  data.replace(/~/g, counter);
+            // var formatted = data.split("~").join(`${counter}`);
             counter += 1;
-            var divtartalma = $('#hozzavalos').html();
-            $('#hozzavalos').html(divtartalma + formatted);
+            // var divtartalma = $('#hozzavalos').html();
+            // $('#hozzavalos').html(divtartalma + formatted);
+            $( "#hozzavalos" ).append( formatted );
           }
         });
       });
     </script>
-
-
-    <script>
-      function showResult(str) {
-        if (str.length == 0) {
-          document.getElementById("livesearch").innerHTML = "";
-          document.getElementById("livesearch").style.border = "0px";
-          return;
-        }
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("livesearch").innerHTML = this.responseText;
-            document.getElementById("livesearch").style.border = "1px solid #A5ACB2";
-          }
-        }
-        xmlhttp.open("GET", "livesearch.php?q=" + str, true);
-        xmlhttp.send();
-      }
-    </script>
+    
 </body>
