@@ -1,0 +1,1076 @@
+    /* Háttér */
+    
+    body {
+        /* zoom: 74%; */
+        background-color: #e8e3e8;
+    }
+    
+    head {
+        background-color: #e8e3e8;
+    }
+    /* -------------------------------------------------------------------------------------------------------------------------------------- */
+    /* Linkek színei */
+    
+    a:link {
+        color: black;
+        background-color: transparent;
+        text-decoration: none;
+    }
+    
+    a:visited {
+        color: black;
+        background-color: transparent;
+        text-decoration: none;
+    }
+    /* -------------------------------------------------------------------------------------------------------------------------------------- */
+    /* Slideshow container */
+    
+    .slideshow-container {
+        max-width: 80%;
+        position: relative;
+        margin: 0px auto 0px auto;
+    }
+    
+    .search_and_log {
+        float: right;
+    }
+    
+    .recept_table {
+        table-layout: fixed;
+        width: 100%;
+        /* border: 1px solid #ccc; */
+        margin-top: 30px;
+    }
+    /* th, td{
+border: 1px solid #ccc;
+
+} */
+    
+    .recipe_text {
+        text-align: left;
+        vertical-align: top;
+    }
+    
+    .recipe_media {
+        text-align: center;
+        vertical-align: center;
+    }
+    
+    .nev_ido_tav {
+        /* line-height: 0% */
+        margin-bottom: 0;
+    }
+    
+    .szoveg {
+        color: black;
+        text-align: center;
+    }
+    /* -------------------------------------------------------------------------------------------------------------------------------------- */
+    /* MENÜ */
+    
+    .maci {
+        z-index: 1;
+    }
+    
+    .valami {
+        margin-left: 40px;
+    }
+    
+    .menu {
+        /* zoom: 74%; */
+        background-color: rgb(3, 31, 83);
+        /*menu hattere*/
+        overflow: hidden;
+        width: 80%;
+        margin: 0 auto;
+        /* transition: 0.8s all; */
+    }
+    
+    .menu a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 20px 12px 20px 12px;
+        text-decoration: none;
+        font-size: 85%;
+        font-family: "Comic Sans MS", "Comic Sans";
+    }
+    
+    .dropdown {
+        float: left;
+        overflow: hidden;
+        font-family: "Comic Sans MS", "Comic Sans";
+    }
+    
+    .dropdown .dropbtn {
+        font-size: 85%;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 20px 12px 20px 12px;
+        background-color: inherit;
+        margin: 0;
+        text-decoration: none;
+        font-family: "Comic Sans MS", "Comic Sans";
+    }
+    
+    .content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+    
+    .content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+    
+    .menu a:hover,
+    .dropdown:hover .dropbtn {
+        /* background-color: rgb(32, 35, 238);	menu mutatos szine */
+        /* color: black; */
+        color: rgb(34, 157, 173);
+    }
+    
+    .aktiv {
+        background-color: rgb(34, 157, 173);
+        /*menu megnyomott szine*/
+        color: white;
+    }
+    
+    .tartalom {
+        padding: 0px;
+    }
+    
+    .content a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+    
+    .dropdown:hover .content {
+        display: block;
+    }
+    
+    .menu .icon {
+        display: none;
+        max-width: 3%;
+    }
+    /* RESZPONZIVITÁS */
+    /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the menu (.icon) */
+    
+    @media screen and (max-width: 1275px) {
+        .menu a:not(:first-child),
+        .dropdown .dropbtn {
+            display: none;
+        }
+        .menu a.icon {
+            float: right;
+            display: block;
+        }
+    }
+    /* The "responsive" class is added to the menu with JavaScript when the user clicks on the icon. This class makes the menu look good on small screens (display the links vertically instead of horizontally) */
+    
+    @media screen and (max-width: 1293px) {
+        .menu.responsive {
+            position: relative;
+        }
+        .menu.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .menu.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+        .menu.responsive .dropdown {
+            float: none;
+        }
+        .menu.responsive .content {
+            position: relative;
+        }
+        .menu.responsive .dropdown .dropbtn {
+            display: block;
+            width: 100%;
+            text-align: left;
+        }
+    }
+    /* -------------------------------------------------------------------------------------------------------------------------------------- */
+    /*MUNKALAPOK*/
+    
+    #munkalap1 {
+        /* background-image: url("pottyos.jpg"); */
+        /* background-color: rgb(53, 43, 201);
+width: 80%;
+height: 100%;
+margin: 0 auto;
+padding: 2% 0% 2% 0%;
+position: relative;
+z-index: 0; */
+        background-image: url("pottyos1.jpg");
+        width: 76%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 2%;
+        background-repeat: repeat;
+        background-attachment: fixed;
+        position: relative;
+        z-index: 0;
+    }
+    
+    #munkalap2 {
+        /* background-color:rgba(53, 167, 233, 0.7); */
+        background-color: rgb(173, 255, 91);
+        border-top: 3px solid black;
+        border-left: 3px solid black;
+        border-right: 3px solid black;
+        color: rgba(0, 0, 0, 0.0);
+        width: 54%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 4% 4% 0 4%;
+    }
+    
+    #munkalap3 {
+        /* background-image: url("pottyos.jpg"); */
+        background-color: rgb(38, 130, 235);
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 2% 0% 2% 0%;
+        border: 3px solid black;
+        /* position: relative;
+z-index: 0; */
+    }
+    
+    #labjegyzet {
+        /* background-image: url("macikk.png");
+background-repeat: no-repeat; */
+        /* background-attachment: fixed; */
+        width: 84.68%;
+        height: auto;
+        margin-top: -8.5%;
+        margin-left: 8.98%;
+        z-index: -1;
+        position: relative;
+    }
+    /* #munkalap_folott {
+height: 0px;
+color: rgba(0, 0, 0, 0.0);
+} */
+    /* -------------------------------------------------------------------------------------------------------------------------------------- */
+    /* Tartalom (ideiglenes) */
+    
+    p,
+    h2,
+    h3 {
+        color: rgb(0, 0, 0);
+        font-family: "times new roman";
+    }
+    
+    .h2 {
+        text-align: center;
+    }
+    
+    h1 {
+        font-size: 30px;
+    }
+    /* -------------------------------------------------------------------------------------------------------------------------------------- */
+    /* Search */
+    /* .menu .search-container {
+float: right;
+} */
+    
+    .menu input[type=text] {
+        padding: 6px;
+        margin-top: 14px;
+        font-size: 70%;
+        border: none;
+    }
+    /* .menu .search-container button {
+float: right;
+padding: 6px 10px;
+margin-top: 8px;
+margin-right: 16px;
+background: rgb(13, 158, 202);
+font-size: 17px;
+border: none;
+cursor: pointer;
+font-size: 50%;
+text-align: center;
+text-decoration: black;
+} */
+    /* .menu .search-container button:hover {
+background: #ccc;
+} */
+    
+    @media screen and (max-width: 600px) {
+        .menu .search-container {
+            float: none;
+        }
+        .menu a,
+        .menu input[type=text],
+        .menu .search-container button {
+            float: none;
+            display: block;
+            text-align: left;
+            width: 100%;
+            margin: 0;
+            padding: 6px;
+        }
+        .menu input[type=text] {
+            border: 1px solid #ccc;
+        }
+    }
+    /* -------------------------------------------------------------------------------------------------------------------------------------- */
+    /* Login */
+    /* Full-width input fields */
+    
+    input[type=text],
+    input[type=password] {
+        width: 80%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+    /* Set a style for all buttons */
+    
+    .searchbtn {
+        background-color: rgb(34, 157, 173);
+        color: white;
+        padding: 4px 10px;
+        margin: 14px 0px 8px 0px;
+        border: none;
+        cursor: pointer;
+        width: auto;
+    }
+    
+    .loginbtn {
+        background-color: rgb(34, 157, 173);
+        color: white;
+        padding: 4px 10px;
+        margin: 14px 40px 8px 0px;
+        border: none;
+        cursor: pointer;
+        width: auto;
+    }
+    
+    .submitbtn {
+        text-align: center;
+        float: right;
+        padding: 10px 18px;
+        width: auto;
+    }
+    
+    .adminbtn {
+        text-align: center;
+        float: right;
+        padding: 10px 18px;
+        width: auto;
+        margin: 14px 40px 8px 0px;
+        border: 1px solid black;
+    }
+    
+    .addrecipebtn {
+        text-align: center;
+        float: right;
+        padding: 10px 18px;
+        width: auto;
+        margin: 14px 40px 8px 0px;
+        border: 1px solid black;
+    }
+    
+    button:hover {
+        opacity: 0.8;
+    }
+    
+    .loginpage {
+        background-color: white;
+    }
+    
+    .loginwindow {
+        width: 60%;
+        margin: auto;
+        width: 50%;
+        border: 3px solid black;
+        padding: 10px;
+        background-color: rgb(145, 210, 253);
+    }
+    /* Extra styles for the cancel button */
+    
+    .cancelbtn {
+        width: auto;
+        padding: 10px 18px;
+        background-color: #f44336;
+    }
+    /* Center the image and position the close button */
+    
+    .imgcontainer {
+        text-align: center;
+        margin: 15px 0 0 0;
+        position: relative;
+    }
+    
+    img.avatar {
+        width: 30%;
+        border-radius: 30%;
+    }
+    
+    .container {
+        padding: 10px;
+    }
+    
+    span.psw {
+        float: right;
+        padding-top: 16px;
+    }
+    /* The Modal (background) */
+    
+    .modal {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: auto;
+        /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0);
+        /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4);
+        /* Black w/ opacity */
+        padding-top: 60px;
+    }
+    /* Modal Content/Box */
+    
+    .modal-content {
+        background-color: #fefefe;
+        margin: 5% auto 15% auto;
+        /* 5% from the top, 15% from the bottom and centered */
+        border: 1px solid #888;
+        width: 40%;
+        /* Could be more or less, depending on screen size */
+    }
+    /* The Close Button (x) */
+    
+    .close {
+        position: absolute;
+        right: 25px;
+        top: 0;
+        color: #000;
+        font-size: 35px;
+        font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+        color: red;
+        cursor: pointer;
+    }
+    /* Add Zoom Animation */
+    
+    .animate {
+        -webkit-animation: animatezoom 0.6s;
+        animation: animatezoom 0.6s
+    }
+    
+    @-webkit-keyframes animatezoom {
+        from {
+            -webkit-transform: scale(0)
+        }
+        to {
+            -webkit-transform: scale(1)
+        }
+    }
+    
+    @keyframes animatezoom {
+        from {
+            transform: scale(0)
+        }
+        to {
+            transform: scale(1)
+        }
+    }
+    /* Change styles for span and cancel button on extra small screens */
+    /* @media screen and (max-width: 300px) {
+span.psw {
+ display: block;
+ float: none;
+}
+.cancelbtn {
+ width: 100%;
+}
+} */
+    /**
+* Grid styles
+*/
+    
+    .kajakep,
+    .w3-content,
+    .mySlides {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+    /* Caption text */
+    
+    .slidetext {
+        font-size: 30px;
+        background-color: rgba(0, 12, 119, 0.5);
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 0px;
+        width: 97.8%;
+        height: 100px;
+        text-align: center;
+        font-weight: bold;
+        color: white;
+    }
+    /* Fading animation */
+    
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+    
+    @-webkit-keyframes fade {
+        from {
+            opacity: .4
+        }
+        to {
+            opacity: 1
+        }
+    }
+    
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+        to {
+            opacity: 1
+        }
+    }
+    /* On smaller screens, decrease text size */
+    
+    @media only screen and (max-width: 300px) {
+        .text {
+            font-size: 11px
+        }
+    }
+    /* .video-responsive{
+overflow:hidden;
+padding-bottom:56.25%;
+position:relative;
+height:0;
+}
+.video-responsive iframe{
+left:0;
+top:0;
+height:100%;
+width:100%;
+position:absolute;
+} */
+    /* * {
+box-sizing: border-box;
+}
+
+
+
+#myVideo {
+position: fixed;
+right: 0;
+bottom: 0;
+min-width: 100%; 
+min-height: 100%;
+z-index: -1;
+pointer-events: none;
+background-size: smaller;
+} */
+    /* #main{
+width: 100%;
+height: 100vh;
+background-image: url(../hatter1.jpg);
+position: absolute;
+} */
+    
+    .alert {
+        padding: 20px;
+        background-color: #f44336;
+        color: white;
+    }
+    
+    .closebtn {
+        margin-left: 15px;
+        color: white;
+        font-weight: bold;
+        float: right;
+        font-size: 22px;
+        line-height: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    
+    .closebtn:hover {
+        color: black;
+    }
+    /* @media only screen and (min-width: 979px) {
+.menu {
+  zoom: 74%;
+}
+} */
+    
+    .grid {
+        display: grid;
+        /*enélkül nem lesz táblázatos*/
+        grid-template-columns: 1fr 1fr 1fr;
+        /*oszlopok száma és szélessége*/
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    
+    .feltolto {
+        text-align: right;
+        font-size: medium;
+        float: right;
+    }
+    
+    .felirat {
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.2);
+        height: 20px;
+    }
+    
+    .felirathalloween {
+        text-align: center;
+        height: 20px;
+        background-color: rgba(255, 255, 255, 0.2);
+        color: orange;
+    }
+    
+    .feliratkeres {
+        text-align: center;
+        height: 20px;
+        background-color: rgba(255, 255, 255, 0.2);
+        color: white;
+    }
+    
+    .receptkep {
+        width: 500px;
+        height: 150px;
+    }
+    
+    ol.k {
+        list-style-type: lower-alpha;
+    }
+    /* .center {
+    position: absolute;
+    z-index: 15;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -150px;
+    background: red;
+} */
+    /* background-image: url("pottyos.jpg"); */
+    /* background-color: rgb(53, 43, 201);
+width: 80%;
+height: 100%;
+margin: 0 auto;
+padding: 2% 0% 2% 0%;
+position: relative;
+z-index: 0; */
+    
+    #munkalap1reggeli {
+        background-image: url("reggeli.jpg");
+        width: 76%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 2%;
+        background-repeat: repeat;
+        background-attachment: fixed;
+        position: relative;
+        z-index: 0;
+    }
+    
+    #munkalap3reggeli {
+        /* background-image: url("pottyos.jpg"); */
+        background-color: rgb(206, 98, 216);
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 2% 0% 2% 0%;
+        border: 3px solid black;
+        /* position: relative;
+z-index: 0; */
+    }
+    
+    #munkalap1ebed {
+        /* background-image: url("pottyos.jpg"); */
+        /* background-color: rgb(53, 43, 201);
+width: 80%;
+height: 100%;
+margin: 0 auto;
+padding: 2% 0% 2% 0%;
+position: relative;
+z-index: 0; */
+        background-image: url("ebed.png");
+        width: 76%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 2%;
+        background-repeat: repeat;
+        background-attachment: fixed;
+        position: relative;
+        z-index: 0;
+    }
+    
+    #munkalap3ebed {
+        /* background-image: url("pottyos.jpg"); */
+        background-color: rgb(252, 122, 35);
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 2% 0% 2% 0%;
+        border: 3px solid black;
+        /* position: relative;
+z-index: 0; */
+    }
+    
+    #munkalap1edesseg {
+        /* background-image: url("pottyos.jpg"); */
+        /* background-color: rgb(53, 43, 201);
+width: 80%;
+height: 100%;
+margin: 0 auto;
+padding: 2% 0% 2% 0%;
+position: relative;
+z-index: 0; */
+        background-image: url("edesseg.jpg");
+        width: 76%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 2%;
+        background-repeat: repeat;
+        background-attachment: fixed;
+        position: relative;
+        z-index: 0;
+    }
+    
+    #munkalap3edesseg {
+        /* background-image: url("pottyos.jpg"); */
+        background-color: rgb(134, 192, 240);
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 2% 0% 2% 0%;
+        border: 3px solid black;
+        /* position: relative;
+z-index: 0; */
+    }
+    
+    #munkalap1sossag {
+        /* background-image: url("pottyos.jpg"); */
+        /* background-color: rgb(53, 43, 201);
+width: 80%;
+height: 100%;
+margin: 0 auto;
+padding: 2% 0% 2% 0%;
+position: relative;
+z-index: 0; */
+        background-image: url("sossag.jpg");
+        width: 76%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 2%;
+        background-repeat: repeat;
+        background-attachment: fixed;
+        position: relative;
+        z-index: 0;
+    }
+    
+    #munkalap3sossag {
+        /* background-image: url("pottyos.jpg"); */
+        background-color: rgb(110, 223, 88);
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 2% 0% 2% 0%;
+        border: 3px solid black;
+        /* position: relative;
+z-index: 0; */
+    }
+    
+    #munkalap1halloween {
+        /* background-image: url("pottyos.jpg"); */
+        /* background-color: rgb(53, 43, 201);
+width: 80%;
+height: 100%;
+margin: 0 auto;
+padding: 2% 0% 2% 0%;
+position: relative;
+z-index: 0; */
+        background-image: url("halloween.jpg");
+        width: 76%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 2%;
+        background-repeat: repeat;
+        background-attachment: fixed;
+        position: relative;
+        z-index: 0;
+    }
+    
+    #munkalap3halloween {
+        /* background-image: url("pottyos.jpg"); */
+        background-color: black;
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 2% 0% 2% 0%;
+        border: 3px solid orange;
+        /* position: relative;
+z-index: 0; */
+    }
+    
+    #munkalap1karacsony {
+        /* background-image: url("pottyos.jpg"); */
+        /* background-color: rgb(53, 43, 201);
+width: 80%;
+height: 100%;
+margin: 0 auto;
+padding: 2% 0% 2% 0%;
+position: relative;
+z-index: 0; */
+        background-image: url("christmas.jpg");
+        width: 76%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 2%;
+        background-repeat: repeat;
+        background-attachment: fixed;
+        position: relative;
+        z-index: 0;
+    }
+    
+    #munkalap3karacsony {
+        /* background-image: url("pottyos.jpg"); */
+        background-color: rgb(9, 158, 9);
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 2% 0% 2% 0%;
+        border: 3px solid black;
+        /* position: relative;
+z-index: 0; */
+    }
+    
+    #munkalap1szulinap {
+        /* background-image: url("pottyos.jpg"); */
+        /* background-color: rgb(53, 43, 201);
+width: 80%;
+height: 100%;
+margin: 0 auto;
+padding: 2% 0% 2% 0%;
+position: relative;
+z-index: 0; */
+        background-image: url("birthday.jpg");
+        width: 76%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 2%;
+        background-repeat: repeat;
+        background-attachment: fixed;
+        position: relative;
+        z-index: 0;
+    }
+    
+    #munkalap3szulinap {
+        /* background-image: url("pottyos.jpg"); */
+        background-color: rgb(222, 226, 0);
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 2% 0% 2% 0%;
+        border: 3px solid black;
+        /* position: relative;
+z-index: 0; */
+    }
+    
+    #munkalap1husvet {
+        /* background-image: url("pottyos.jpg"); */
+        /* background-color: rgb(53, 43, 201);
+width: 80%;
+height: 100%;
+margin: 0 auto;
+padding: 2% 0% 2% 0%;
+position: relative;
+z-index: 0; */
+        background-image: url("easter.jpg");
+        width: 76%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 2%;
+        background-repeat: repeat;
+        background-attachment: fixed;
+        position: relative;
+        z-index: 0;
+    }
+    
+    #munkalap3husvet {
+        /* background-image: url("pottyos.jpg"); */
+        background-color: rgb(255, 189, 230);
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 2% 0% 2% 0%;
+        border: 3px solid black;
+        /* position: relative;
+z-index: 0; */
+    }
+    
+    #munkalap1szilveszter {
+        /* background-image: url("pottyos.jpg"); */
+        /* background-color: rgb(53, 43, 201);
+width: 80%;
+height: 100%;
+margin: 0 auto;
+padding: 2% 0% 2% 0%;
+position: relative;
+z-index: 0; */
+        background-image: url("newyear.jpg");
+        width: 76%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 2%;
+        background-repeat: repeat;
+        background-attachment: fixed;
+        position: relative;
+        z-index: 0;
+    }
+    
+    #munkalap3szilveszter {
+        /* background-image: url("pottyos.jpg"); */
+        background-color: rgb(172, 9, 9);
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 2% 0% 2% 0%;
+        border: 3px solid black;
+        /* position: relative;
+z-index: 0; */
+    }
+    
+    #munkalap1italok {
+        /* background-image: url("pottyos.jpg"); */
+        /* background-color: rgb(53, 43, 201);
+width: 80%;
+height: 100%;
+margin: 0 auto;
+padding: 2% 0% 2% 0%;
+position: relative;
+z-index: 0; */
+        background-image: url("koktel.jpg");
+        width: 76%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 2%;
+        background-repeat: repeat;
+        background-attachment: fixed;
+        position: relative;
+        z-index: 0;
+    }
+    
+    #munkalap3italok {
+        /* background-image: url("pottyos.jpg"); */
+        background-color: rgb(38, 157, 165);
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 2% 0% 2% 0%;
+        border: 3px solid black;
+        /* position: relative;
+z-index: 0; */
+    }
+    
+    #munkalap1kreativ {
+        /* background-image: url("pottyos.jpg"); */
+        /* background-color: rgb(53, 43, 201);
+width: 80%;
+height: 100%;
+margin: 0 auto;
+padding: 2% 0% 2% 0%;
+position: relative;
+z-index: 0; */
+        background-image: url("diy.jpg");
+        width: 76%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 2%;
+        background-repeat: repeat;
+        background-attachment: fixed;
+        position: relative;
+        z-index: 0;
+    }
+    
+    #munkalap3kreativ {
+        /* background-image: url("pottyos.jpg"); */
+        background-color: rgb(102, 187, 226);
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 2% 0% 2% 0%;
+        border: 3px solid black;
+        /* position: relative;
+z-index: 0; */
+    }
+    
+    #munkalap1keres {
+        /* background-image: url("pottyos.jpg"); */
+        /* background-color: rgb(53, 43, 201);
+width: 80%;
+height: 100%;
+margin: 0 auto;
+padding: 2% 0% 2% 0%;
+position: relative;
+z-index: 0; */
+        background-image: url("nagyito3.png");
+        width: 76%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 2%;
+        background-repeat: repeat;
+        background-attachment: fixed;
+        position: relative;
+        z-index: 0;
+    }
+    
+    #munkalap3keres {
+        /* background-image: url("pottyos.jpg"); */
+        background-color: rgb(3, 31, 83);
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+        padding: 2% 0% 2% 0%;
+        border: 3px solid black;
+        color: white;
+        /* position: relative;
+z-index: 0; */
+    }
