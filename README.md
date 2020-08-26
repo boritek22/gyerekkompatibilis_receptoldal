@@ -1,3 +1,4 @@
+# Gyerekkompatibilis_Receptoldal
 Szakdolgozatom végleges változata.
 A szakdolgozat témája egy olyan receptoldal, mely játékosan elkészíthető receptekkel segít a szülőknek bevonni a legkisebbeket is a
 konyhai munkálatokba. A cél egy olyan webes alkalmazás elkészítése, mely interaktív tartalmakkal, a sütés ideje alatt is fenntartja a gyerekek
